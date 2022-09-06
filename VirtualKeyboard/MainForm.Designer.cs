@@ -113,6 +113,7 @@
             this.label73 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.lblPower = new System.Windows.Forms.Label();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.portStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1018,7 +1019,8 @@
             // 
             this.portStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stText,
-            this.linkToWebsite});
+            this.linkToWebsite,
+            this.toolStripStatusLabel1});
             this.portStatusStrip.Location = new System.Drawing.Point(0, 371);
             this.portStatusStrip.Name = "portStatusStrip";
             this.portStatusStrip.Size = new System.Drawing.Size(915, 22);
@@ -1029,7 +1031,7 @@
             // 
             this.stText.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.stText.Name = "stText";
-            this.stText.Size = new System.Drawing.Size(725, 17);
+            this.stText.Size = new System.Drawing.Size(731, 17);
             this.stText.Spring = true;
             this.stText.Text = "Serial Port: Inactive";
             this.stText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1039,8 +1041,9 @@
             this.linkToWebsite.IsLink = true;
             this.linkToWebsite.LinkColor = System.Drawing.Color.Blue;
             this.linkToWebsite.Name = "linkToWebsite";
-            this.linkToWebsite.Size = new System.Drawing.Size(175, 17);
-            this.linkToWebsite.Text = "https://www.liaoxuefeng.com";
+            this.linkToWebsite.Size = new System.Drawing.Size(55, 17);
+            this.linkToWebsite.Tag = "https://www.liaoxuefeng.com";
+            this.linkToWebsite.Text = "Website";
             this.linkToWebsite.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkToWebsite.Click += new System.EventHandler(this.OpenWebsite);
             // 
@@ -1116,6 +1119,17 @@
             this.lblPower.Text = "Power";
             this.lblPower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPower.Click += new System.EventHandler(this.ToggleSerialPort);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.toolStripStatusLabel1.IsLink = true;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(83, 17);
+            this.toolStripStatusLabel1.Tag = "https://github.com/michaelliao/virtual-keyboard";
+            this.toolStripStatusLabel1.Text = "Source Code";
+            this.toolStripStatusLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.OpenWebsite);
             // 
             // MainForm
             // 
@@ -1302,5 +1316,6 @@
         private Label label73;
         private Label label71;
         private Label lblPower;
+        private ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

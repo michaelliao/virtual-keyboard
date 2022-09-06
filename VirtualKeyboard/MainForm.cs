@@ -492,8 +492,9 @@ namespace VirtualKeyboard
             ToolStripStatusLabel label = sender as ToolStripStatusLabel;
             if (label != null)
             {
-                Debug.WriteLine("Open url: " + label.Text);
-                ProcessStartInfo psi = new ProcessStartInfo("cmd", "/c start " + label.Text);
+                Debug.WriteLine("Open url: " + label.Tag);
+                ProcessStartInfo psi = new ProcessStartInfo((string)label.Tag);
+                psi.UseShellExecute = true;
                 try
                 {
                     System.Diagnostics.Process.Start(psi);
