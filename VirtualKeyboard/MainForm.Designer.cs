@@ -1031,9 +1031,9 @@
             // 
             this.stText.BackColor = System.Drawing.SystemColors.Control;
             this.stText.Name = "stText";
-            this.stText.Size = new System.Drawing.Size(762, 17);
+            this.stText.Size = new System.Drawing.Size(731, 17);
             this.stText.Spring = true;
-            this.stText.Text = "Serial Port: Inactive";
+            this.stText.Text = "Please click \"Power\" to open serial port.";
             this.stText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // linkToWebsite
