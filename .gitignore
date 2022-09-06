@@ -1,5 +1,7 @@
 bin/
 obj/
+Release/
+Debug/
 
 # hidden files:
 
