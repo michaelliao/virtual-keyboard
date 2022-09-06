@@ -419,12 +419,41 @@ namespace VirtualKeyboard
             }
         }
 
+        private void OnSerialPortDataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                Thread.Sleep(250);
+                byte[] buffer = new byte[20];
+                int n = this.serialPort.Read(buffer, 0, buffer.Length);
+                if (n > 0)
+                {
+                    Debug.WriteLine("Read " + n + " bytes from serial port.");
+                    StringBuilder sb = new StringBuilder(40);
+                    sb.Append("Received:");
+                    for (int i = 0; i < n; i++)
+                    {
+                        sb.Append(" ").Append(buffer[i].ToString("X2"));
+                    }
+                    string s = sb.ToString();
+                    this.portStatusStrip.Invoke(() =>
+                    {
+                        this.SetStatus(s);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.Write(ex.ToString());
+            }
+        }
+
         private void SendSerialDataWork()
         {
             Debug.WriteLine("Serial port sending thread started.");
             while (this.serialPort != null)
             {
-                Thread.Sleep(10);
+                Thread.Sleep(5);
                 lock (bufferLock)
                 {
                     if (bufferQueue.Count > 0)
@@ -466,6 +495,7 @@ namespace VirtualKeyboard
         private void OpenPort(SerialPort port)
         {
             this.serialPort = port;
+            this.serialPort.DataReceived += this.OnSerialPortDataReceived;
             this.lblPower.BackColor = Color.Green;
             SetStatus("Serial port is open.");
             this.bufferQueue.Clear();
@@ -475,6 +505,7 @@ namespace VirtualKeyboard
 
         private void ClosePort()
         {
+            this.serialPort.DataReceived -= this.OnSerialPortDataReceived;
             this.serialPort.Close();
             this.serialPort = null;
             this.lblPower.BackColor = Color.DarkRed;
@@ -503,6 +534,14 @@ namespace VirtualKeyboard
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.serialPort != null)
+            {
+                this.ClosePort();
             }
         }
     }

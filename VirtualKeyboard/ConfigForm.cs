@@ -40,7 +40,8 @@ namespace VirtualKeyboard
                 port.Parity = (Parity)Enum.Parse(typeof(Parity), this.cmbParity.SelectedItem.ToString());
                 port.StopBits = (StopBits)Enum.Parse(typeof(StopBits), this.cmbStopBits.SelectedItem.ToString());
                 port.DtrEnable = true;
-                port.RtsEnable = false;
+                port.RtsEnable = true;
+                port.Handshake = Handshake.None;
                 try
                 {
                     port.Open();

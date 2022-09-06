@@ -107,13 +107,13 @@
             this.portStatusStrip = new System.Windows.Forms.StatusStrip();
             this.stText = new System.Windows.Forms.ToolStripStatusLabel();
             this.linkToWebsite = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label72 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.lblPower = new System.Windows.Forms.Label();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.portStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1029,9 +1029,9 @@
             // 
             // stText
             // 
-            this.stText.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.stText.BackColor = System.Drawing.SystemColors.Control;
             this.stText.Name = "stText";
-            this.stText.Size = new System.Drawing.Size(731, 17);
+            this.stText.Size = new System.Drawing.Size(762, 17);
             this.stText.Spring = true;
             this.stText.Text = "Serial Port: Inactive";
             this.stText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1046,6 +1046,17 @@
             this.linkToWebsite.Text = "Website";
             this.linkToWebsite.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkToWebsite.Click += new System.EventHandler(this.OpenWebsite);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.toolStripStatusLabel1.IsLink = true;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(83, 17);
+            this.toolStripStatusLabel1.Tag = "https://github.com/michaelliao/virtual-keyboard";
+            this.toolStripStatusLabel1.Text = "Source Code";
+            this.toolStripStatusLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.toolStripStatusLabel1.Click += new System.EventHandler(this.OpenWebsite);
             // 
             // label72
             // 
@@ -1119,17 +1130,6 @@
             this.lblPower.Text = "Power";
             this.lblPower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblPower.Click += new System.EventHandler(this.ToggleSerialPort);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.ActiveLinkColor = System.Drawing.Color.Blue;
-            this.toolStripStatusLabel1.IsLink = true;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(83, 17);
-            this.toolStripStatusLabel1.Tag = "https://github.com/michaelliao/virtual-keyboard";
-            this.toolStripStatusLabel1.Text = "Source Code";
-            this.toolStripStatusLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.OpenWebsite);
             // 
             // MainForm
             // 
@@ -1223,6 +1223,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Virtual Keyboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnKeyUp);
             this.portStatusStrip.ResumeLayout(false);
             this.portStatusStrip.PerformLayout();
