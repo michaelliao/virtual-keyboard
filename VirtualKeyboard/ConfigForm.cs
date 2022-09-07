@@ -31,7 +31,11 @@ namespace VirtualKeyboard
         private void OpenPort(object sender, EventArgs e)
         {
             object selected = this.cmbPort.SelectedItem;
-            if (selected != null)
+            if (selected == null)
+            {
+                MessageBox.Show("Please select a serial port.", "Cannot Open Port", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             {
                 SerialPort port = new SerialPort();
                 port.PortName = selected.ToString();
