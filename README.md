@@ -1,5 +1,6 @@
-# virtual-keyboard
-Virtual keyboard is a simulated keyboard with RS-232 serial port support.
+# Virtual Keyboard
+
+Virtual keyboard is a simulated keyboard with RS-232 serial port support. It can be used as a keyboard input for embeded system via a RS-232 serial port.
 
 ```
    ╔════════════════════╗
@@ -49,6 +50,6 @@ You can click the key button to send keys:
 
 ![keyboard-send-keys](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/keyboard-send-keys.png?raw=true)
 
-You can also type the keyboard to send keys directly, but make sure the Virtual Keyboard window is activated in order to receive the keyboard input.
+You can also type the keyboard to send keys directly, but make sure the Virtual Keyboard window is active in order to receive the keyboard input.
 
 The code sent to the serial port can be found in the status bar. For example, the key `Shift` + `A` produces codes `12 1C F0 1C F0 12`.
