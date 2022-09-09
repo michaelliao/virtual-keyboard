@@ -1,6 +1,6 @@
 # Virtual Keyboard
 
-Virtual keyboard is a simulated keyboard with RS-232 serial port support. It can be used as a keyboard input for embeded system via a RS-232 serial port.
+Virtual keyboard is a simulated keyboard with RS-232 serial port support. It can be used as a keyboard input for embedded system via a RS-232 serial port.
 
 ```
    ╔════════════════════╗
@@ -42,7 +42,7 @@ The code sent to the serial port can be found in the status bar. For example, th
 
 # Download
 
-Download VirtualKeyboard.exe for Windows [x64 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x64/VirtualKeyboard.exe) or [x86 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x86/VirtualKeyboard.exe).
+Download `VirtualKeyboard.exe` for Windows [x64 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x64/VirtualKeyboard.exe) or [x86 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x86/VirtualKeyboard.exe).
 
 If you run `VirtualKeyboard.exe` with an error like this:
 
@@ -52,4 +52,4 @@ Click `Yes` to download .Net 6 Runtime from browser to run desktop apps:
 
 ![download-runtime](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/download-runtime.png?raw=true)
 
-You should choose `Windows` - `Run Desktop Apps` - `Download x64` or `Download x86`.
+You should choose `Windows` - `Run desktop apps` - `Download x64` or `Download x86`.
