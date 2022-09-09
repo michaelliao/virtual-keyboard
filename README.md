@@ -22,21 +22,7 @@ Virtual keyboard is a simulated keyboard with RS-232 serial port support. It can
     └──────────────────┘
 ```
 
-### Download
-
-Download VirtualKeyboard.exe for Windows [x64 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x64/VirtualKeyboard.exe) or [x86 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x86/VirtualKeyboard.exe).
-
-If you run `VirtualKeyboard.exe` with an error like this:
-
-![app-launch-failed](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/app-launch-failed.png?raw=true)
-
-Click `Yes` to download .Net 6 Runtime from browser to run desktop apps:
-
-![download-runtime](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/download-runtime.png?raw=true)
-
-You should choose `Windows` - `Download x64` or `Download x86`.
-
-### Usage
+# Usage
 
 Click `Power` button to open a serial port after launch the app:
 
@@ -53,3 +39,17 @@ You can click the key button to send keys:
 You can also type the keyboard to send keys directly, but make sure the Virtual Keyboard window is active in order to receive the keyboard input.
 
 The code sent to the serial port can be found in the status bar. For example, the key `Shift` + `A` produces codes `12 1C F0 1C F0 12`.
+
+# Download
+
+Download VirtualKeyboard.exe for Windows [x64 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x64/VirtualKeyboard.exe) or [x86 version](https://github.com/michaelliao/virtual-keyboard/raw/master/Download/x86/VirtualKeyboard.exe).
+
+If you run `VirtualKeyboard.exe` with an error like this:
+
+![app-launch-failed](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/app-launch-failed.png?raw=true)
+
+Click `Yes` to download .Net 6 Runtime from browser to run desktop apps:
+
+![download-runtime](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/download-runtime.png?raw=true)
+
+You should choose `Windows` - `Download x64` or `Download x86`.
