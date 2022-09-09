@@ -52,4 +52,4 @@ Click `Yes` to download .Net 6 Runtime from browser to run desktop apps:
 
 ![download-runtime](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/download-runtime.png?raw=true)
 
-You should choose `Windows` - `Download x64` or `Download x86`.
+You should choose `Windows` - `Run Desktop Apps` - `Download x64` or `Download x86`.
