@@ -29,8 +29,8 @@ If you run `VirtualKeyboard.exe` with an error like this:
 
 ![app-launch-failed](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/app-launch-failed.png?raw=true)
 
-Click OK to download .Net 6 Runtime from browser to run desktop apps:
+Click `Yes` to download .Net 6 Runtime from browser to run desktop apps:
 
 ![download-runtime](https://github.com/michaelliao/virtual-keyboard/blob/master/Download/resources/download-runtime.png?raw=true)
 
-You should choose "Windows" - "Download x64" or "Download x86".
+You should choose `Windows` - `Download x64` or `Download x86`.
